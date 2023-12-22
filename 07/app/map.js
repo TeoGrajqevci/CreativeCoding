@@ -111,8 +111,8 @@ class MapWithCountryInfo {
         countryDiv.style.cursor = 'none';
         countryDiv.style.display = 'flex';
         countryDiv.style.justifyContent = 'center';
-        countryDiv.style.borderRadius = '30px'; // Add rounded corners
-        countryDiv.style.paddingTop = '10px'; // Add top padding
+        countryDiv.style.borderRadius = '30px'; 
+        countryDiv.style.paddingTop = '10px'; 
 
         return nearestCountry || 'Unknown';
     }

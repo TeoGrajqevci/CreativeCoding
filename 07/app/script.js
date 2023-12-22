@@ -68,40 +68,40 @@ ctx = canvas.getContext('2d');
 
 
 
-function drawCursorLines(){
-    ctx.beginPath();
-    ctx.strokeStyle = "rgba(0,255,0,1)"; 
-    ctx.stroke
-    ctx.lineWidth = 3;
-    ctx.strokeRect(mouseX-15, mouseY-15, 30, 30);
-    ctx.closePath();
+// function drawCursorLines(){
+//     ctx.beginPath();
+//     ctx.strokeStyle = "rgba(0,255,0,1)"; 
+//     ctx.stroke
+//     ctx.lineWidth = 3;
+//     ctx.strokeRect(mouseX-15, mouseY-15, 30, 30);
+//     ctx.closePath();
 
-    ctx.beginPath();
-    ctx.moveTo(mouseX, 0); // Starting point at the top-left corner
-    ctx.lineTo(mouseX, canvas.height); // Ending point at the bottom-left corner
-    ctx.strokeStyle = "rgba(0,255,0,1)"; // Line color
-    ctx.lineWidth = 3; // Line width
-    ctx.stroke();
-    ctx.fill();
-    ctx.closePath();
+//     ctx.beginPath();
+//     ctx.moveTo(mouseX, 0); // Starting point at the top-left corner
+//     ctx.lineTo(mouseX, canvas.height); // Ending point at the bottom-left corner
+//     ctx.strokeStyle = "rgba(0,255,0,1)"; // Line color
+//     ctx.lineWidth = 3; // Line width
+//     ctx.stroke();
+//     ctx.fill();
+//     ctx.closePath();
 
-    ctx.beginPath();
-    ctx.moveTo(0, mouseY); // Starting point at the left-middle of the screen
-    ctx.lineTo(canvas.width, mouseY); // Ending point at the right-middle of the screen
-    ctx.strokeStyle = "rgba(0,255,0,1)"; // Line color
-    ctx.lineWidth = 3; // Line width
-    ctx.stroke();
-    ctx.fill();
-    ctx.closePath();
-}
+//     ctx.beginPath();
+//     ctx.moveTo(0, mouseY); // Starting point at the left-middle of the screen
+//     ctx.lineTo(canvas.width, mouseY); // Ending point at the right-middle of the screen
+//     ctx.strokeStyle = "rgba(0,255,0,1)"; // Line color
+//     ctx.lineWidth = 3; // Line width
+//     ctx.stroke();
+//     ctx.fill();
+//     ctx.closePath();
+// }
 
-function drawCursorText(){
-    ctx.textAlign = "left";
-    ctx.font = "12px Arial";
-    ctx.fillStyle = "rgba(0,255,0,1)";
-    ctx.fillText("X : "+mouseX, mouseX+20, mouseY-40);
-    ctx.fillText("Y : "+mouseY, mouseX+20, mouseY-15);
-}
+// function drawCursorText(){
+//     ctx.textAlign = "left";
+//     ctx.font = "12px Arial";
+//     ctx.fillStyle = "rgba(0,255,0,1)";
+//     ctx.fillText("X : "+mouseX, mouseX+20, mouseY-40);
+//     ctx.fillText("Y : "+mouseY, mouseX+20, mouseY-15);
+// }
 
 
 
@@ -155,10 +155,10 @@ class App {
 
             this.audioFile = "knob.mp3";
             this.audio = new Audio(this.audioFile);
-            this.audio.volume = 1; // Double the audio volume
+            this.audio.volume = 1; 
             this.audioFile2 = "bip.mp3";
             this.audio2 = new Audio(this.audioFile2);
-            this.audio2.volume = 0.5; // Double the audio volume
+            this.audio2.volume = 0.5; 
   
       
      
@@ -225,22 +225,22 @@ this.ctx.clearRect(0, 0, this.width, this.height);
     this.ctx.beginPath();
 
     this.ctx.beginPath();
-    this.ctx.moveTo(this.mouseX, 0); // Starting point at the top-left corner
-    this.ctx.lineTo(this.mouseX, this.height); // Ending point at the bottom-left corner
-    this.ctx.strokeStyle = this.isMouseDown ? "rgba(255,0,0,1)" : "rgba(0,255,0,1)"; // Line color (red if mouse is down, green otherwise)
-    this.ctx.lineWidth = 3; // Line width
+    this.ctx.moveTo(this.mouseX, 0); 
+    this.ctx.lineTo(this.mouseX, this.height); 
+    this.ctx.strokeStyle = this.isMouseDown ? "rgba(255,0,0,1)" : "rgba(0,255,0,1)"; 
+    this.ctx.lineWidth = 3; 
     this.ctx.stroke();
     this.ctx.fill();
 
     this.ctx.beginPath();
-    this.ctx.strokeStyle = this.isMouseDown ? "rgba(255,0,0,1)" : "rgba(0,255,0,1)"; // Line color (red if mouse is down, green otherwise)
-    this.ctx.lineWidth = 3; // Line width
-    this.ctx.moveTo(0, this.mouseY); // Starting point at the left-middle of the screen
-    this.ctx.lineTo(this.width, this.mouseY); // Ending point at the right-middle of the screen
+    this.ctx.strokeStyle = this.isMouseDown ? "rgba(255,0,0,1)" : "rgba(0,255,0,1)"; 
+    this.ctx.lineWidth = 3; 
+    this.ctx.moveTo(0, this.mouseY); 
+    this.ctx.lineTo(this.width, this.mouseY); 
     this.ctx.stroke();     
 
     this.ctx.beginPath();
-    this.ctx.strokeStyle = this.isMouseDown ? "rgba(255,0,0,1)" : "rgba(0,255,0,1)"; // Line color (red if mouse is down, green otherwise)
+    this.ctx.strokeStyle = this.isMouseDown ? "rgba(255,0,0,1)" : "rgba(0,255,0,1)"; 
     this.ctx.lineWidth = 3;
     this.ctx.strokeRect(this.mouseX-15, this.mouseY-15, 30, 30);
     this.ctx.closePath();
@@ -254,7 +254,7 @@ this.ctx.clearRect(0, 0, this.width, this.height);
 
     this.ctx.textAlign = "left";
     this.ctx.font = "12px Arial";
-    this.ctx.fillStyle = this.isMouseDown ? "rgba(255,0,0,1)" : "rgba(0,255,0,1)"; // Text color (red if mouse is down, green otherwise)
+    this.ctx.fillStyle = this.isMouseDown ? "rgba(255,0,0,1)" : "rgba(0,255,0,1)"; 
     this.ctx.fillText("X : "+lng, this.mouseX+20, this.mouseY-40);
     this.ctx.fillText("Y : "+lat, this.mouseX+20, this.mouseY-15);
 
