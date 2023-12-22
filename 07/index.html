@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Raster</title>
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css">
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<body>  
+    <style>
+        #countryInput,
+        button,
+        #webcamInfoContainer {
+            display: none;
+        }
+    </style>
+
+    <label for="countryInput"></label>
+    <input type="text" id="countryInput">
+    <button onclick="getRandomWebcams()">Get Random Webcam</button>
+
+    <div id="webcamInfoContainer"></div>
+ 
+
+
+    <div id="container">
+        <div id="map"></div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+    <script src="app/EventEmitter.js"></script>
+    <script src="app/MidiConnection.js"></script>
+
+ 
+    <script src="app/map.js"></script>
+    <script src="app/script.js"></script>
+</body>
+
+</html>
