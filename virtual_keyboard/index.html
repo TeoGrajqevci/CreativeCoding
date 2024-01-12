@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+   
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+
+    <script type="module" src="/main.js"></script>
+    <style type="text/css">
+    body {
+      
+      margin: 0;
+      overflow: hidden;
+    }
+
+    video, canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+video {
+  z-index: 1;
+}
+
+canvas {
+  z-index: 2;
+}
+    </style>  
+  </head>
+  <body>
+    <div id="score-container">
+      Score: <span id="score">0</span>
+    </div>
+    <style>
+     @font-face {
+  font-family: 'CustomFont'; /* Choose a suitable font-family name */
+  src: url('./tasks/typo.ttf') format('truetype');
+}
+
+#score-container {
+  background-color: black;
+  border: 1px solid red;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: 'CustomFont', Arial, sans-serif; /* Use the custom font */
+  font-size: 20px;
+  color: rgb(255, 0, 0);
+  z-index: 99999;
+}
+    </style>
+  </body>
+</html>
